@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width= device-width, 
+    initial-scale=1">
+    <meta name="keywords" content="House Finder, Vacant house,
+    House for rent, House, search for vacant houses in nigeria">
+    <meta name="description" content="Find a vacant house near you">
+    <title>LandLord</title>
+    <link rel="stylesheet" href="../style/housefinder.css">
+    <link rel="stylesheet" href="../style/footerfix.css">
+    <link rel="stylesheet" type="text/css" href="../style/font-awesome.min.css">
+    <script src="../script/jquery-3.1.1.min.js"></script>
+    <script src="../script/states.js"></script>
+    <script>
+	    $(document).ready(function(){
+			$('#states').change(function(){
+				var selectedid = $('option:selected', this).attr('id');
+				
+				var state = selectedid.toString();
+				
+				switch(state){
+					case "abia":
+					    $(addLGA(state));
+						break;
+					case 'abuja':
+					    $(addLGA(state));
+					    break;
+					case 'adamawa':
+					    $(addLGA(state));
+						break;
+					case 'akwaibom':
+					    $(addLGA(state));
+						break;
+				}
+			});
+		});
+	</script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a class="logo" href="index.html">House<span class="finder">Finder</span><span class="dotcom">.com</span></a>
+      </div>
+      <nav class="nav">
+        <ul class="links">
+          <li><a href="index.html"><i class="fa fa-home" title="Home"></i></a></li>
+          <li class="categories right">
+            <a href="#categories" class="accordion" >Categories</a>
+              <div class="categories-content">
+                <a href="bungalow.html">Bungalow</a>
+                <a href="duplex.html">Duplex</a>
+                <a href="self-con.html">Self-con</a>
+                <a href="land.html">Land</a>
+              </div>
+            </li>
+            <li class="right"><a href="agent.html">Agent</a></li>
+            <li class="active right"><a href="landlord.html">LandLord</a></li>
+        </ul>
+      </nav>
+      <div class="maincontent">
+        <form action="upload.php" method="post" enctype="multipart/form-data">Select image to uplaod:
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="submit" value="Upload photo" name="submit">
+        </form>
+        <form class="uploadform">
+          <table>
+            <tr>
+              <th colspan="2">Fill in the form</th>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td>
+                <select id="select" class="select">
+                  <option value="0">Choose type</option>
+                  <option value="Bungalow">Bungalow</option>
+                  <option value="Duplex">Duplex</option>
+                  <option value="Land">Land</option>
+                  <option value="Self-con">Self-con</option>
+                  <option value="Upstairs">Upstairs</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Location of building</td>
+              <td>
+                <select class="select" id="states">
+                  <option value="0">Choose State</option>
+                  <option value="Abia" id="abia">Abia</a></option>
+                  <option value="Abuja" id="abuja">Abuja</option>
+                  <option value="Adamawa" id="adamawa">Adamawa</option>
+                  <option value="Akwa Ibom" id="awkaibom">Akwa Ibom</option>
+                  <option value="Anambra" id="anambra">Anambra</option>
+                  <option value="Bauchi" id="bauchi">Bauchi</option>
+                  <option value="Bayelsa" id="bayelsa">Bayelsa</option>
+                  <option value="Benue" id="benue">Benue</option>
+                  <option value="Borno" id="borno">Borno</option>
+                  <option value="Cross River" id="crossriver">Cross River</option>
+                  <option value="Delta" id="delta">Delta</option>
+                  <option value="Ebonyi" id="ebonyi">Ebonyi</option>
+                  <option value="Enugu" id="enugu">Enugu</option>
+                  <option value="Edo" id="edo">Edo</option>
+                  <option value="Ekiti" id="ekiti">Ekiti</option>
+                  <option value="Gombe" id="gombe">Gombe</option>
+                  <option value="Imo" id="imo">Imo</option>
+                  <option value="Jigawa" id="jigawa">Jigawa</option>
+                  <option value="Kaduna" id="kaduna">Kaduna</option>
+                  <option value="Kano" id="kano">Kano</option>
+                  <option value="Katsina" id="katsina">Katsina</option>
+                  <option value="Kebbi" id="kebbi">Kebbi</option>
+                  <option value="Kogi" id="kogi">Kogi</option>
+                  <option value="Lagos" id="lago">Lagos</option>
+                  <option value="Nasarawa" id="nasarawa">Nasarawa</option>
+                  <option value="Niger" id="niger">Niger</option>
+                  <option value="Ogun" id="ogun">Ogun</option>
+                  <option value="Ondo" id="ondo">Ondo</option>
+                  <option value="Osun" id="osun">Osun</option>
+                  <option value="Oyo" id="oyo">Oyo</option>
+                  <option value="Plateau" id="plateau">Plateau</option>
+                  <option value="Rivers" id="rivers">Rivers</option>
+                  <option value="Sokoto" id="sokoto">Sokoto</option>
+                  <option value="Taraba" id="taraba">Taraba</option>
+                  <option value="Yobe" id="yobe">Yobe</option>
+                  <option value="Zamfara" id="zamfara">Zamfara</option>                  
+                </select>
+              </td>
+            </tr>
+            <tr id="lga">
+              <td id="area">LGA</td>
+              <td id="lgadata"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="clearfix"></div>
+      <div style="padding: 6px;"></div>
+      <div class="footer">
+        <footer>
+          <ul class="ul-footer">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

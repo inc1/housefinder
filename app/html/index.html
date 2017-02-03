@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width= device-width, 
+    initial-scale=1">
+    <meta name="keywords" content="House Finder, Vacant house,
+    House for rent, House, search for vacant houses in nigeria">
+    <meta name="description" content="Find a vacant house near you">
+    <title>House Finder</title>
+    <link rel="stylesheet" href="../style/housefinder.css"></link>
+    <link rel="stylesheet" type="text/css" href="../style/font-awesome.min.css">
+    <script src="../script/jquery-3.1.1.js"></script>
+    <script src="../script/fixedscroll.js"></script>
+    <script src="../script/TreeMenu.js"></script>
+    <script>
+	  $(document).ready(function(){
+		  $(".bars").click(function(){
+			  $("nav ul").toggle('.hidelinks');
+		  });
+		  
+		  $(".searchglass i").click(function(){
+			  $(".search").toggle('.hideinput');
+		  });
+
+		  $("#searchbox").click(function(){
+		      if($("#searchbox").val() == "Advanced Search"){
+			       $("#searchbox").val("");
+			  }
+		  });
+	  });
+	</script>
+    <style>
+	  .active{
+		  height: 54px;
+	  }
+	</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <p><a class="logo" href="index.html">House<span class="finder">F</span></a><a class="logo" href="index.html"><span class="finder">inder</span><span class="dotcom">.com</span></a></p>
+      </div>
+      <nav class="nav" id="nav">
+        <div class="bars">
+          <i class="fa fa-bars" style="font-size: 36px;"></i>
+        </div>
+        <div class="bars-clear" style="padding: 3px"></div>
+        <ul class="links top-nav">
+          <li class="active" style=""><a href="index.html"><i class="fa fa-home" title="Home"></i></a></li>
+          <li class="categories right" id="categories">
+            <a href="#categories" class="accordion">Categories</a>
+              <div class="categories-content">
+                <a href="bungalow.html">Bungalow</a> 
+                <a href="duplex.html">Duplex</a>
+                <a href="self-con.html">Self-con</a>
+                <a href="land.html">Land</a>
+              </div>
+            </li>
+            <li class="right"><a href="agent.html">Agent</a></li>
+            <li class="right"><a href="landlord.html">LandLord</a></li>
+            <div class="searchglass">
+              <i class="fa fa-search"  title="search"></i>
+            </div>            
+            <div class="search">
+              <form class="hfsearch" method="get">
+                <input type="text" id="searchbox" placeholder="Advanced Search" autocomplete="on">
+              </form>
+            </div>
+        </ul>
+        <script>make_tree_menu('categories');</script>
+      </nav>
+      <div class="maincontent">
+        <div class="background-cover">
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img1.jpg" target="_blank">
+              <img src="../image/img1.jpg" height="200" width="300">
+            </a>        
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img2.png" target="_blank">
+              <img src="../image/img2.png" height="200" width="300">
+            </a>
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img3.jpg" target="_blank">
+              <img src="../image/img3.jpg" height="200" width="300">
+            </a>        
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img4.jpg" target="_blank">
+              <img src=" ../image/img4.jpg" height="200" width="300">
+            </a>
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img5.jpg" target="_blank">
+              <img src="../image/img5.jpg" height="200" width="300">
+            </a>
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img6.jpg" target="_blank">
+              <img src="../image/img6.jpg" height="200" width="300">
+            </a>
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img7.jpg" target="_blank">
+              <img src="../image/img7.jpg" height="200" width="300">
+            </a>
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img8.jpg" target="_blank">
+              <img src="../image/img8.jpg" height="200" width="300">
+            </a>
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img9.jpg" target="_blank">
+              <img src="../image/img9.jpg" height="200" width="300">
+            </a>
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img10.jpg" target="_blank">
+              <img src="../image/img10.jpg" height="200" width="300">
+            </a>
+            <div class="desc"></div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="img">
+            <a href="../image/img11.jpg" target="_blank">
+              <img src="../image/img11.jpg" height="200" width="300">
+            </a>
+            <div class="desc"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div style="padding: 6px;"></div>
+      <div class="footer">
+        <footer>
+          <ul class="ul-footer">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
